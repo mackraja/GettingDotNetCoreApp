@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GettingDotNetCoreApp.Core.DataLayer;
+using GettingDotNetCoreApp.Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -39,6 +40,7 @@ namespace GettingDotNetCoreApp.Api
                 b => b.MigrationsAssembly("GettingDotNetCoreApp.Api")
             ));
 
+            services.AddInfrastructure();
             services.AddControllers();
             services.AddMvc();
             services.AddCors();
