@@ -1,0 +1,9 @@
+# vs local files
+*.orig
+.idea/
+.vscode/
+.vs/
+
+# Debug files
+**/Debug
+**/obj
