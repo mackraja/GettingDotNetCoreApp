@@ -1,7 +1,12 @@
-<nav  class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" routerLink="/">Angular Demo</a>
-        <div  class="collapse navbar-collapse"  id="navbarSupportedContent">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/swagger">
+        <img src="assets/img/swagger.png" width="35" height="35" alt="Swagger">
+    </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul  class="navbar-nav mr-auto">
+                <li routerLinkActive="active" class="nav-item">
+                    <a class="nav-link" routerLink="/">To-Do</a>
+                </li>
                 <li routerLinkActive="active" class="nav-item">
                     <a class="nav-link" routerLink="/recipes">Recipes</a>
                 </li>
