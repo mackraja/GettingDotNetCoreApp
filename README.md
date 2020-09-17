@@ -5,7 +5,7 @@
 - [x] Added Routes
 - [x] Added Form
 - [x] Added Http
-- [ ] Added NgRx for State Management
+- [x] Added NgRx and Store-devtools
 - [ ] Dapper to access SQL Database using Repository Patter
 - [x] Use three layer architecture in API
 - [ ] Log the Input and Output from API in Serilog
