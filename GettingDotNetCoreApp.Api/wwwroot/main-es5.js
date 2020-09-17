@@ -1689,38 +1689,48 @@
       NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: NavbarComponent,
         selectors: [["app-navbar"]],
-        decls: 11,
+        decls: 14,
         vars: 0,
-        consts: [[1, "navbar", "navbar-expand-lg", "navbar-light", "bg-light"], ["routerLink", "/", 1, "navbar-brand"], ["id", "navbarSupportedContent", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "mr-auto"], ["routerLinkActive", "active", 1, "nav-item"], ["routerLink", "/recipes", 1, "nav-link"], ["routerLink", "/roles", 1, "nav-link"]],
+        consts: [[1, "navbar", "navbar-expand-lg", "navbar-light", "bg-light"], ["href", "/swagger", 1, "navbar-brand"], ["src", "assets/img/swagger.png", "width", "35", "height", "35", "alt", "Swagger"], ["id", "navbarSupportedContent", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "mr-auto"], ["routerLinkActive", "active", 1, "nav-item"], ["routerLink", "/", 1, "nav-link"], ["routerLink", "/recipes", 1, "nav-link"], ["routerLink", "/roles", 1, "nav-link"]],
         template: function NavbarComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nav", 0);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Angular Demo");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 2);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ul", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ul", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "li", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "li", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Recipes");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "To-Do");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "li", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Recipes");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "li", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "li", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "a", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Roles");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Roles");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1733,7 +1743,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
           }
         },
-        directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkActive"]],
+        directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkActive"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL25hdmJhci9uYXZiYXIuY29tcG9uZW50LmNzcyJ9 */"]
       });
       /*@__PURE__*/
@@ -2083,7 +2093,7 @@
         selectors: [["app-to-do"]],
         decls: 54,
         vars: 0,
-        consts: [[1, "container", "my-4"], [1, "font-weight-bold"], [1, "list-group", "list-group-flush"], [1, "list-group-item"], [1, "custom-control", "custom-checkbox"], ["type", "checkbox", "id", "check1", "checked", "", 1, "custom-control-input"], ["for", "check1", 1, "custom-control-label"], ["type", "checkbox", "id", "check2", "checked", "", 1, "custom-control-input"], ["for", "check2", 1, "custom-control-label"], ["type", "checkbox", "id", "check8", "checked", "", 1, "custom-control-input"], ["for", "check8", 1, "custom-control-label"], ["type", "checkbox", "id", "check3", 1, "custom-control-input"], ["for", "check3", 1, "custom-control-label"], ["type", "checkbox", "id", "check4", 1, "custom-control-input"], ["for", "check4", 1, "custom-control-label"], ["type", "checkbox", "id", "check5", "checked", "", 1, "custom-control-input"], ["for", "check5", 1, "custom-control-label"], ["type", "checkbox", "id", "check6", 1, "custom-control-input"], ["for", "check6", 1, "custom-control-label"], ["type", "checkbox", "id", "check7", 1, "custom-control-input"], ["for", "check7", 1, "custom-control-label"], ["type", "checkbox", "id", "check9", "checked", "", 1, "custom-control-input"], ["for", "check9", 1, "custom-control-label"], ["type", "checkbox", "id", "check10", "checked", "", 1, "custom-control-input"], ["for", "check10", 1, "custom-control-label"]],
+        consts: [[1, "container", "my-4"], [1, "font-weight-bold"], [1, "list-group", "list-group-flush"], [1, "list-group-item"], [1, "custom-control", "custom-checkbox"], ["type", "checkbox", "id", "check1", "checked", "", 1, "custom-control-input"], ["for", "check1", 1, "custom-control-label"], ["type", "checkbox", "id", "check2", "checked", "", 1, "custom-control-input"], ["for", "check2", 1, "custom-control-label"], ["type", "checkbox", "id", "check8", "checked", "", 1, "custom-control-input"], ["for", "check8", 1, "custom-control-label"], ["type", "checkbox", "id", "check3", "checked", "", 1, "custom-control-input"], ["for", "check3", 1, "custom-control-label"], ["type", "checkbox", "id", "check4", 1, "custom-control-input"], ["for", "check4", 1, "custom-control-label"], ["type", "checkbox", "id", "check5", "checked", "", 1, "custom-control-input"], ["for", "check5", 1, "custom-control-label"], ["type", "checkbox", "id", "check6", 1, "custom-control-input"], ["for", "check6", 1, "custom-control-label"], ["type", "checkbox", "id", "check7", 1, "custom-control-input"], ["for", "check7", 1, "custom-control-label"], ["type", "checkbox", "id", "check9", "checked", "", 1, "custom-control-input"], ["for", "check9", 1, "custom-control-label"], ["type", "checkbox", "id", "check10", "checked", "", 1, "custom-control-input"], ["for", "check10", 1, "custom-control-label"]],
         template: function ToDoComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -2152,7 +2162,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "label", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "Added NgRx for State Management");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "Added NgRx and Store-devtools");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
