@@ -1,5 +1,7 @@
 import { RecipeModel } from '../models';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export default class RecipeService {
     private recipes: RecipeModel[] = [
         new RecipeModel('Shrimp Recipes', 'These shrimp recipes are easy enough for a quick weeknight dinner, delish enough for date night', "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-taco-lime-shrimp-still006-1527253576.jpeg"),

@@ -1,6 +1,8 @@
 import { Subject } from 'rxjs'
 import { RolesModel } from '../models';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export default class RolesService {
   roleListChanged = new Subject<RolesModel[]>();
   startedEditing = new Subject<number>();

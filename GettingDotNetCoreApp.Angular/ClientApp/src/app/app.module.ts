@@ -39,15 +39,15 @@ import * as fromApp from './store/app.reducer';
     HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot(fromApp.appReducer),
-    // StoreDevtoolsModule.instrument({
-    //   maxAge: 25,
-    //   logOnly: false,
-    //   features: {
-    //     pause: false,
-    //     lock: true,
-    //     persist: true
-    //   }
-    // }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: false,
+      features: {
+        pause: false,
+        lock: true,
+        persist: true
+      }
+    }),
   ],
   providers: [RecipeService, RolesService],
   bootstrap: [AppComponent]
