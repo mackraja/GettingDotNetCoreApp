@@ -1,16 +1,16 @@
 import { Subject } from 'rxjs'
-import { RoleModel } from '../models/role.model';
+import { RolesModel } from '../models';
 
-export class RoleService {
-  roleListChanged = new Subject<RoleModel[]>();
+export default class RolesService {
+  roleListChanged = new Subject<RolesModel[]>();
   startedEditing = new Subject<number>();
-  roleList: RoleModel[] = [];
+  roleList: RolesModel[] = [];
 
   constructor() {
     const createdAt = new Date().toLocaleString();
     this.roleList.push(
-      new RoleModel('Admin', true, createdAt),
-      new RoleModel('Super Admin', true, createdAt)
+      new RolesModel('Admin', true, createdAt),
+      new RolesModel('Super Admin', true, createdAt)
     );
    }
 
@@ -22,13 +22,13 @@ export class RoleService {
     return this.roleList[index];
   }
 
-  addRole(role: RoleModel) {
+  addRole(role: RolesModel) {
     this.roleList.push(role);
     console.log('addRole -------> ', this.roleList);
     this.roleListChanged.next(this.roleList.slice());
   }
 
-  updateRole(index: number, newRole: RoleModel) {
+  updateRole(index: number, newRole: RolesModel) {
     this.roleList[index] = newRole;
     console.log('updateRole -------> ', this.roleList);
     this.roleListChanged.next(this.roleList.slice());

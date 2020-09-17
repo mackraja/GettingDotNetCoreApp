@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { RoleService } from '../services/role.Service';
+import { RolesService } from '../services';
 
 @Injectable({
     providedIn: 'root'
 })
-export class RoleAction {
+export default class RolesHttp {
 
-    constructor(private http: HttpClient, private rlService: RoleService) { }
+    constructor(private http: HttpClient, private rlService: RolesService) { }
 
     fetchRoles() {
 

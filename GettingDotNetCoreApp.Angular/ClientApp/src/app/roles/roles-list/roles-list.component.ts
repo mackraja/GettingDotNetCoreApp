@@ -1,40 +1,34 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { RoleService } from 'src/app/services/role.Service';
-import { RoleModel } from 'src/app/models/role.model';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+
+import { RolesModel } from 'src/app/models';
+import * as RolesAction from '../../store/actions/roles.action';
 
 @Component({
   selector: 'app-roles-list',
   templateUrl: './roles-list.component.html',
   styleUrls: ['./roles-list.component.css']
 })
-export class RolesListComponent implements OnInit, OnDestroy {
+export class RolesListComponent implements OnInit {
 
-  roleList: RoleModel[];
-  private subscription: Subscription;
-
-  constructor(private rlService: RoleService) {
+  roleList: Observable<{ roles: RolesModel[] }>;
+  
+  constructor(
+    private store: Store<{ roleList: { roles: RolesModel[]} }> ) {
    }
 
   ngOnInit(): void {
-    this.roleList = this.rlService.getRoleList();
-    this.subscription = this.rlService.roleListChanged
-      .subscribe(
-        (roleList: RoleModel[]) => {
-          this.roleList = roleList;
-        }
-      );
+    this.roleList = this.store.select('roleList');
+    this.roleList.subscribe(d => console.log('roles --->>> ', d.roles));
   }
 
   onEditRole(index: number) {
-    this.rlService.startedEditing.next(index);
+    this.store.dispatch(new RolesAction.StartEdit(index));
   }
 
   onDeleteRole(index: number) {
-    this.rlService.deleteRole(index);
+    this.store.dispatch(new RolesAction.DeleteRoles(index));
   }
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
 }

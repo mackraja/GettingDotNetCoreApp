@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let role of roleList; let i = index">
+      <tr *ngFor="let role of (roleList | async ).roles; let i = index">
         <td>{{ role.name }}</td>
         <td>{{ role.status }}</td>
         <td>{{ role.createdAt }}</td>

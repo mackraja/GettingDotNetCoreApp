@@ -1,8 +1,10 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { RoleService } from '../services/role.Service';
-import { RoleModel } from '../models/role.model';
+import { RolesModel } from '../models';
+import { Store } from '@ngrx/store';
+import * as RolesAction from '../store/actions/roles.action';
+import * as fromApp from '../store/app.reducer';
 
 @Component({
   selector: 'app-roles',
@@ -13,34 +15,34 @@ export class RolesComponent implements OnInit, OnDestroy {
   @ViewChild('f', { static: false }) rlForm: NgForm;
   subscription: Subscription;
   editMode = false;
-  editedItemIndex: number;
-  editedItem: RoleModel;
+  editedItem: RolesModel;
   
-  constructor(private rlService: RoleService) { }
+  constructor(private store: Store<fromApp.AppState>) { }
 
-  ngOnInit(): void {
-    this.subscription = this.rlService.startedEditing
-      .subscribe(
-        (index: number) => {
-          this.editedItemIndex = index;
+  ngOnInit() {
+    this.subscription = this.store
+      .select('roleList')
+      .subscribe(stateData => {
+        if(stateData.editedRolesIndex > -1) {
           this.editMode = true;
-          this.editedItem = this.rlService.getRole(index);
+          this.editedItem = stateData.editedRoles;
           this.rlForm.setValue({
             name: this.editedItem.name,
             status: this.editedItem.status
           })
         }
-      );
+      });
   }
 
   onSubmit(form: NgForm) {
     let { name, status } = form.value;
     status = status ? true : false;
-    const newRole = new RoleModel(name, status, new Date().toLocaleString());
+    const newRole = new RolesModel(name, status, new Date().toLocaleString());
+    
     if (this.editMode) {
-      this.rlService.updateRole(this.editedItemIndex, newRole);
+      this.store.dispatch(new RolesAction.UpdatedRoles(newRole));
     } else {
-      this.rlService.addRole(newRole);
+      this.store.dispatch(new RolesAction.AddRoles(newRole));
     }
     this.editMode = false;
     form.reset();
