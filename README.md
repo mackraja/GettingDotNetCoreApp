@@ -1,4 +1,4 @@
-## getting-dot-net-web-api
+## GettingDotNetCoreApp
 
 ### To-do List
 
